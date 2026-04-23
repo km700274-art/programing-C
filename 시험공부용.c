@@ -1,15 +1,19 @@
 #include <stdio.h>
 int main()
 {
-    int C;
-    double f;
+    int second; // 입력변수
+    int hour, min, sec; // 출력변수
+    int leftsec; // 중간변수
 
-    printf("섭씨온도를 입력하세요 > ");
-    scanf("%d", &C);
+    printf("시간을 초 단위로 입력하세요: ");
+    scanf("%d",&second);
+    
+    hour = second / 3600;
+    leftsec = second % 3600;
+    min = leftsec / 60;
+    leftsec % 60; //복합대입연산자 사용
+    sec = leftsec;
 
-    f = 9.0 / 5 * c + 32;
-
-    printf("섭씨 %d도는 화씨 %f도입니다.Wn",c,f);
-
+    printf("%d초는 %d시간 %d분 %d초입니다/n",second, hour, min, sec);
     return 0;
 }
